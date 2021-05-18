@@ -7,7 +7,7 @@ services:
     image: garystafford/jenkins-devops:2018.04.19
     hostname: jenkins
     ports:
-    - "8083:8080/tcp"
+    - "8083:8083/tcp"
     - "50000:50000/tcp"
     networks:
     - demo_overlay_net
