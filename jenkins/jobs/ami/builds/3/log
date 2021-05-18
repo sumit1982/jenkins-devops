@@ -1,0 +1,121 @@
+Started by user [8mha:////4K0o+GxxpQuGJnFYUb9nwrlIKpgGL7RL8tVZQXw1XXItAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgYe/dLi1CL9ovz8guRiAF6kleXBAAAA[0msumit
+Running as SYSTEM
+Building in workspace /var/jenkins_home/jobs/ami/workspace
+The recommended git tool is: NONE
+using credential b355494c-1678-4e68-b260-f8cc91c4f09f
+ > git rev-parse --resolve-git-dir /var/jenkins_home/jobs/ami/workspace/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/sumit1982/ami.git # timeout=10
+Fetching upstream changes from https://github.com/sumit1982/ami.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.20.1'
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --force --progress -- https://github.com/sumit1982/ami.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 71b0a0b9b8e46c5fe979dbf033cc9e929705d142 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 71b0a0b9b8e46c5fe979dbf033cc9e929705d142 # timeout=10
+Commit message: "updated ami json"
+ > git rev-list --no-walk 71b0a0b9b8e46c5fe979dbf033cc9e929705d142 # timeout=10
+[workspace] $ /bin/sh -xe /tmp/jenkins4764143635057048405.sh
++ packer build ami.json
+2021/04/18 12:27:41 [INFO] Packer version: 1.2.2
+2021/04/18 12:27:41 Packer Target OS/Arch: linux amd64
+2021/04/18 12:27:41 Built with Go Version: go1.10
+2021/04/18 12:27:41 Detected home directory from env var: /var/jenkins_home
+2021/04/18 12:27:41 Using internal plugin for amazon-ebsvolume
+2021/04/18 12:27:41 Using internal plugin for cloudstack
+2021/04/18 12:27:41 Using internal plugin for oracle-classic
+2021/04/18 12:27:41 Using internal plugin for virtualbox-iso
+2021/04/18 12:27:41 Using internal plugin for amazon-ebssurrogate
+2021/04/18 12:27:41 Using internal plugin for file
+2021/04/18 12:27:41 Using internal plugin for lxc
+2021/04/18 12:27:41 Using internal plugin for vmware-vmx
+2021/04/18 12:27:41 Using internal plugin for amazon-chroot
+2021/04/18 12:27:41 Using internal plugin for amazon-instance
+2021/04/18 12:27:41 Using internal plugin for googlecompute
+2021/04/18 12:27:41 Using internal plugin for null
+2021/04/18 12:27:41 Using internal plugin for triton
+2021/04/18 12:27:41 Using internal plugin for vmware-iso
+2021/04/18 12:27:41 Using internal plugin for amazon-ebs
+2021/04/18 12:27:41 Using internal plugin for azure-arm
+2021/04/18 12:27:41 Using internal plugin for digitalocean
+2021/04/18 12:27:41 Using internal plugin for lxd
+2021/04/18 12:27:41 Using internal plugin for ncloud
+2021/04/18 12:27:41 Using internal plugin for virtualbox-ovf
+2021/04/18 12:27:41 Using internal plugin for alicloud-ecs
+2021/04/18 12:27:41 Using internal plugin for docker
+2021/04/18 12:27:41 Using internal plugin for hyperv-iso
+2021/04/18 12:27:41 Using internal plugin for oneandone
+2021/04/18 12:27:41 Using internal plugin for parallels-pvm
+2021/04/18 12:27:41 Using internal plugin for qemu
+2021/04/18 12:27:41 Using internal plugin for parallels-iso
+2021/04/18 12:27:41 Using internal plugin for profitbricks
+2021/04/18 12:27:41 Using internal plugin for hyperv-vmcx
+2021/04/18 12:27:41 Using internal plugin for openstack
+2021/04/18 12:27:41 Using internal plugin for oracle-oci
+2021/04/18 12:27:41 Using internal plugin for scaleway
+2021/04/18 12:27:41 Using internal plugin for chef-solo
+2021/04/18 12:27:41 Using internal plugin for converge
+2021/04/18 12:27:41 Using internal plugin for powershell
+2021/04/18 12:27:41 Using internal plugin for salt-masterless
+2021/04/18 12:27:41 Using internal plugin for shell-local
+2021/04/18 12:27:41 Using internal plugin for windows-restart
+2021/04/18 12:27:41 Using internal plugin for chef-client
+2021/04/18 12:27:41 Using internal plugin for file
+2021/04/18 12:27:41 Using internal plugin for ansible
+2021/04/18 12:27:41 Using internal plugin for puppet-server
+2021/04/18 12:27:41 Using internal plugin for ansible-local
+2021/04/18 12:27:41 Using internal plugin for puppet-masterless
+2021/04/18 12:27:41 Using internal plugin for shell
+2021/04/18 12:27:41 Using internal plugin for windows-shell
+2021/04/18 12:27:41 Using internal plugin for vsphere-template
+2021/04/18 12:27:41 Using internal plugin for amazon-import
+2021/04/18 12:27:41 Using internal plugin for checksum
+2021/04/18 12:27:41 Using internal plugin for docker-push
+2021/04/18 12:27:41 Using internal plugin for googlecompute-export
+2021/04/18 12:27:41 Using internal plugin for vsphere
+2021/04/18 12:27:41 Using internal plugin for atlas
+2021/04/18 12:27:41 Using internal plugin for compress
+2021/04/18 12:27:41 Using internal plugin for docker-save
+2021/04/18 12:27:41 Using internal plugin for docker-import
+2021/04/18 12:27:41 Using internal plugin for docker-tag
+2021/04/18 12:27:41 Using internal plugin for manifest
+2021/04/18 12:27:41 Using internal plugin for shell-local
+2021/04/18 12:27:41 Using internal plugin for vagrant
+2021/04/18 12:27:41 Using internal plugin for alicloud-import
+2021/04/18 12:27:41 Using internal plugin for artifice
+2021/04/18 12:27:41 Using internal plugin for vagrant-cloud
+2021/04/18 12:27:41 Detected home directory from env var: /var/jenkins_home
+2021/04/18 12:27:41 Attempting to open config file: /var/jenkins_home/.packerconfig
+2021/04/18 12:27:41 [WARN] Config file doesn't exist: /var/jenkins_home/.packerconfig
+2021/04/18 12:27:41 Packer config: &{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[amazon-ebs:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-ebs oracle-oci:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-oracle-oci cloudstack:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-cloudstack oracle-classic:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-oracle-classic vmware-iso:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-vmware-iso qemu:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-qemu parallels-iso:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-parallels-iso amazon-ebsvolume:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-ebsvolume file:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-file amazon-instance:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-instance virtualbox-ovf:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-virtualbox-ovf hyperv-vmcx:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-hyperv-vmcx vmware-vmx:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-vmware-vmx ncloud:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-ncloud alicloud-ecs:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-alicloud-ecs oneandone:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-oneandone profitbricks:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-profitbricks virtualbox-iso:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-virtualbox-iso amazon-ebssurrogate:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-ebssurrogate lxc:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-lxc null:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-null scaleway:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-scaleway googlecompute:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-googlecompute digitalocean:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-digitalocean lxd:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-lxd docker:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-docker hyperv-iso:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-hyperv-iso parallels-pvm:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-parallels-pvm openstack:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-openstack amazon-chroot:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-chroot triton:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-triton azure-arm:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-azure-arm] PostProcessors:map[docker-save:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-save docker-tag:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-tag manifest:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-manifest alicloud-import:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-alicloud-import vagrant-cloud:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vagrant-cloud vsphere-template:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vsphere-template googlecompute-export:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-googlecompute-export docker-import:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-import amazon-import:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-amazon-import checksum:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-checksum docker-push:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-push vsphere:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vsphere compress:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-compress shell-local:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-shell-local atlas:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-atlas vagrant:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vagrant artifice:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-artifice] Provisioners:map[converge:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-converge salt-masterless:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-salt-masterless file:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-file windows-shell:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-windows-shell chef-solo:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-chef-solo ansible:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-ansible powershell:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-powershell ansible-local:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-ansible-local shell:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-shell shell-local:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-shell-local windows-restart:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-windows-restart chef-client:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-chef-client puppet-server:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-puppet-server puppet-masterless:/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-puppet-masterless]}
+2021/04/18 12:27:41 Detected home directory from env var: /var/jenkins_home
+2021/04/18 12:27:41 Setting cache directory: /var/jenkins_home/jobs/ami/workspace/packer_cache
+2021/04/18 12:27:41 Detected home directory from env var: /var/jenkins_home
+2021/04/18 12:27:41 Loading builder: amazon-ebs
+2021/04/18 12:27:41 Plugin could not be found. Checking same directory as executable.
+2021/04/18 12:27:41 Current exe path: /bin/packer
+2021/04/18 12:27:41 Creating plugin client for path: /bin/packer
+2021/04/18 12:27:41 Starting plugin: /bin/packer []string{"/bin/packer", "plugin", "packer-builder-amazon-ebs"}
+2021/04/18 12:27:41 Waiting for RPC address for: /bin/packer
+2021/04/18 12:27:42 packer: qemu: uncaught target signal 11 (Segmentation fault) - core dumped
+2021/04/18 12:27:42 /bin/packer: plugin process exited
+2021/04/18 12:27:42 ui error: Failed to initialize build 'amazon-ebs': error initializing builder 'amazon-ebs': plugin exited before we could connect
+Failed to initialize build 'amazon-ebs': error initializing builder 'amazon-ebs': plugin exited before we could connect
+2021/04/18 12:27:42 ui: [1;32mamazon-ebs output will be in this color.[0m
+[1;32mamazon-ebs output will be in this color.[0m
+2021/04/18 12:27:42 ui: 
+
+2021/04/18 12:27:42 Build debug mode: false
+2021/04/18 12:27:42 Force build: false
+2021/04/18 12:27:42 On error: 
+2021/04/18 12:27:42 Waiting on builds to complete...
+2021/04/18 12:27:42 Builds completed. Waiting on interrupt barrier...
+2021/04/18 12:27:42 ui: 
+==> Builds finished but no artifacts were created.
+
+==> Builds finished but no artifacts were created.
+2021/04/18 12:27:42 [INFO] (telemetry) Finalizing.
+2021/04/18 12:27:43 waiting for all plugin processes to complete...
+Finished: SUCCESS

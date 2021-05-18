@@ -1,0 +1,44 @@
+Started by user [8mha:////4K0o+GxxpQuGJnFYUb9nwrlIKpgGL7RL8tVZQXw1XXItAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgYe/dLi1CL9ovz8guRiAF6kleXBAAAA[0msumit
+Running as SYSTEM
+Building in workspace /var/jenkins_home/jobs/ami/workspace
+The recommended git tool is: NONE
+using credential b355494c-1678-4e68-b260-f8cc91c4f09f
+Cloning the remote Git repository
+Cloning repository https://github.com/sumit1982/ami.git
+ > git init /var/jenkins_home/jobs/ami/workspace # timeout=10
+Fetching upstream changes from https://github.com/sumit1982/ami.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.20.1'
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --force --progress -- https://github.com/sumit1982/ami.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/sumit1982/ami.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 71b0a0b9b8e46c5fe979dbf033cc9e929705d142 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 71b0a0b9b8e46c5fe979dbf033cc9e929705d142 # timeout=10
+Commit message: "updated ami json"
+First time build. Skipping changelog.
+[workspace] $ /bin/sh -xe /tmp/jenkins5232212364189096521.sh
++ packer build -f ami.json
+Usage: packer build [options] TEMPLATE
+
+  Will execute multiple builds in parallel as defined in the template.
+  The various artifacts created by the template will be outputted.
+
+Options:
+
+  -color=false               Disable color output (on by default)
+  -debug                     Debug mode enabled for builds
+  -except=foo,bar,baz        Build all builds other than these
+  -only=foo,bar,baz          Build only the specified builds
+  -force                     Force a build to continue if artifacts exist, deletes existing artifacts
+  -machine-readable          Machine-readable output
+  -on-error=[cleanup|abort|ask] If the build fails do: clean up (default), abort, or ask
+  -parallel=false            Disable parallelization (on by default)
+  -var 'key=value'           Variable for templates, can be used multiple times.
+  -var-file=path             JSON file containing user variables.
+flag provided but not defined: -f
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

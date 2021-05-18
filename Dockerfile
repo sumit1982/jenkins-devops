@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:latest
+FROM jenkins/jenkins:lts
 
 LABEL maintainer "Gary A. Stafford <garystafford@rochester.rr.com>"
 ENV REFRESHED_AT 2018-04-19
@@ -22,7 +22,7 @@ RUN set +x \
   && env \
   && apt-get update \
   && apt-get -y upgrade \
-  && apt-get -y install openrc openntpd tzdata python3 python3-pip jq git
+  && apt-get -y install openrc openntpd tzdata python3 python3-pip jq git telnet sudo
 
 # update and install Docker CE and associated packages
 RUN set +x \
@@ -70,9 +70,9 @@ RUN set +x \
   && mv terraform /bin
 
 # install Jenkins plugins
-COPY plugins.txt /usr/share/jenkins/plugins.txt
-RUN set +x \
-  && /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
+#COPY plugins.txt /usr/share/jenkins/plugins.txt
+#RUN set +x \
+#  && /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
 
 # list installed software versions
 RUN set +x \
@@ -90,6 +90,10 @@ RUN set +x \
   && cp /usr/share/zoneinfo/${TIMEZONE} /etc/localtime \
   && echo "America/New_York" >  /etc/timezone \
   && date
+# Add Jenkins to sudo file
+#RUN adduser --disabled-password --gecos '' jenkins
+#RUN adduser jenkins sudo
+RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 # drop back to the regular jenkins user - good practice
 USER jenkins

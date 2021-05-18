@@ -1,0 +1,27 @@
+Started by user [8mha:////4K0o+GxxpQuGJnFYUb9nwrlIKpgGL7RL8tVZQXw1XXItAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgYe/dLi1CL9ovz8guRiAF6kleXBAAAA[0msumit
+Running as SYSTEM
+Building in workspace /var/jenkins_home/jobs/ami/workspace
+The recommended git tool is: NONE
+using credential b355494c-1678-4e68-b260-f8cc91c4f09f
+ > git rev-parse --resolve-git-dir /var/jenkins_home/jobs/ami/workspace/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/sumit1982/ami.git # timeout=10
+Fetching upstream changes from https://github.com/sumit1982/ami.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.20.1'
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --force --progress -- https://github.com/sumit1982/ami.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 71b0a0b9b8e46c5fe979dbf033cc9e929705d142 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 71b0a0b9b8e46c5fe979dbf033cc9e929705d142 # timeout=10
+Commit message: "updated ami json"
+ > git rev-list --no-walk 71b0a0b9b8e46c5fe979dbf033cc9e929705d142 # timeout=10
+[workspace] $ /bin/sh -xe /tmp/jenkins2721667880240454318.sh
++ packer build ami.json
+Failed to initialize build 'amazon-ebs': error initializing provisioner 'file': plugin exited before we could connect
+[1;32mamazon-ebs output will be in this color.[0m
+
+
+==> Builds finished but no artifacts were created.
+Finished: SUCCESS
